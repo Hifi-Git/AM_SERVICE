@@ -51,5 +51,7 @@
             <type>war</type>
         </dependency>
     </dependencies>
-    <properties></properties>
+    <properties>
+        <netbeans.hint.deploy.server>WebLogic9</netbeans.hint.deploy.server>
+    </properties>
 </project>

@@ -4,5 +4,5 @@
     <keepgenerated>true</keepgenerated>
     <debug>true</debug>
   </jsp-descriptor>
-  <context-root>/TestJsf-web</context-root>
+  <context-root>/AM_SERVICE-web</context-root>
 </weblogic-web-app>

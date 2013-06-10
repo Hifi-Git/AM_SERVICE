@@ -53,5 +53,7 @@
 
     </plugins>
   </build>
-    <properties></properties>
+    <properties>
+        <netbeans.hint.deploy.server>WebLogic9</netbeans.hint.deploy.server>
+    </properties>
 </project>
