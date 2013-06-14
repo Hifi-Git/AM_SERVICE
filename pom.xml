@@ -10,5 +10,6 @@
     <module>AM_SERVICE-ear</module>
     <module>AM_SERVICE-web</module>
     <module>AM_SERVICE-ejb</module>
+    <!--<module>../mavenproject1</module>-->
   </modules>
 </project>

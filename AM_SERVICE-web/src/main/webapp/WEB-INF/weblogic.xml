@@ -4,5 +4,12 @@
     <keepgenerated>true</keepgenerated>
     <debug>true</debug>
   </jsp-descriptor>
-  <context-root>/AM_SERVICE-web</context-root>
+  <context-root>/AM_SERVICE-web</context-root> 
+  <library-ref>
+    <library-name>jsf</library-name>
+    <specification-version>2.0</specification-version>
+    <implementation-version>1.0.0.0_2-0-2</implementation-version>
+  </library-ref>
+  
+  
 </weblogic-web-app>
