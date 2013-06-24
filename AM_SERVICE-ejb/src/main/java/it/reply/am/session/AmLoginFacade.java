@@ -40,19 +40,17 @@ public class AmLoginFacade extends AbstractFacade<AmLogin> implements AmLoginFac
     public String authenticate(String username , String password) {
         
        Query query =  em.createNamedQuery("AmLogin.authenticate");
-       query.setParameter(username, em);
-       query.setParameter(password, em);
-       String resultName = null;
+       query.setParameter("userName",username);
+       query.setParameter("password", password);
+       String resultName = "";
        try {
          resultName=   query.getSingleResult().toString();
                   
        }catch(NoResultException nRex) {
           log.debug(nRex); 
-          return null ;
        }catch(NonUniqueResultException nURex) {
           log.debug(nURex);
-          return null;
-       }
+       }     
         return  resultName;
     }
     

@@ -9,13 +9,20 @@
     <managed-bean>
         <managed-bean-name>amLoginMB</managed-bean-name>
         <managed-bean-class>it.reply.ofi.mb.AmLoginMB</managed-bean-class>  
-        <managed-bean-scope>session</managed-bean-scope></managed-bean>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
     <navigation-rule>
-        <from-view-id>/testJsfPage.xhtml</from-view-id>
+        <from-view-id>/loginPage.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{amLoginMB.loginAction}</from-action> 
             <from-outcome>success</from-outcome>
             <to-view-id>/welcomePrimefaces.xhtml</to-view-id>
         </navigation-case>
+         <from-view-id>/loginPage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/error.xhtml</to-view-id>
+        </navigation-case>
+        
+        
     </navigation-rule>
 </faces-config>

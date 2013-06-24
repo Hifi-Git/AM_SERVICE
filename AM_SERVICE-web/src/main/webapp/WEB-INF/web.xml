@@ -20,7 +20,7 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>faces/testJsfPage.xhtml</welcome-file>
+        <welcome-file>faces/loginPage.xhtml</welcome-file>
     </welcome-file-list>
     
 </web-app>

@@ -22,6 +22,7 @@ AmLoginFacadeLocal amLoginFacade;
 String username;
 String password;
 
+  
 
     /**
      * Creates a new instance of AmLoginMB
@@ -59,11 +60,12 @@ String password;
    
     String  result  =  amLoginFacade.authenticate(getUsername(),getPassword() );
        
-    if(result != null)
+    if(!"".equals(result))
         return "success";        
     else 
-        return "success";
+        return "error";
    }
+    
    
     
 }

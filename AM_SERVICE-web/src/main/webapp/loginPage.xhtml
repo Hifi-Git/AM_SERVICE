@@ -7,10 +7,11 @@
       xmlns:f="http://java.sun.com/jsf/core">
     <f:view>
     <h:head>  
-   <title>Facelet Title</title>
+            <title>Login Form</title>
     </h:head>  
       
-    <h:body>  
+    <h:body>
+        <h:form >
        <p:panel id="panel" header="Login Form" style="margin-bottom:10px;">  
         <p:messages id="messages" />  
         <h:panelGrid columns="3">  
@@ -25,16 +26,15 @@
             <p:inputText id="password"   
                 value="#{amLoginMB.password}" required="true" label="Password"/>  
             <p:message for="password" />  
-       
-            <h:outputLabel  value= "#{amLoginMB.testEJB}"/>  
+                 
+            <p:commandButton   action="#{amLoginMB.loginAction}" value ="LogIn" ajax="false"/>
             
-            <p:commandButton   action="#{amLoginMB.loginAction}" value ="LogIn"/>
-        
+           
         </h:panelGrid>
-        
+  
         
     </p:panel>  
-        
+        </h:form>
     </h:body>  
         
         </f:view>
