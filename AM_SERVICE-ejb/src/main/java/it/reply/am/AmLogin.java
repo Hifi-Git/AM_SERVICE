@@ -23,10 +23,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "AM_LOGIN")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "AmLogin.findAll", query = "SELECT a FROM AmLogin a"),
-    @NamedQuery(name = "AmLogin.findById", query = "SELECT a FROM AmLogin a WHERE a.id = :id"),
-    @NamedQuery(name = "AmLogin.findByUserName", query = "SELECT a FROM AmLogin a WHERE a.userName = :userName"),
-    @NamedQuery(name = "AmLogin.findByPassword", query = "SELECT a FROM AmLogin a WHERE a.password = :password")})
+    //@NamedQuery(name = "AmLogin.findAll", query = "SELECT a FROM AmLogin a"),
+    //@NamedQuery(name = "AmLogin.findById", query = "SELECT a FROM AmLogin a WHERE a.id = :id"),
+    //@NamedQuery(name = "AmLogin.findByUserName", query = "SELECT a FROM AmLogin a WHERE a.userName = :userName"),
+    @NamedQuery(name = "AmLogin.authenticate", query = "SELECT a FROM AmLogin a WHERE a.password = :password and a.userName = :userName")})
 public class AmLogin implements Serializable {
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation

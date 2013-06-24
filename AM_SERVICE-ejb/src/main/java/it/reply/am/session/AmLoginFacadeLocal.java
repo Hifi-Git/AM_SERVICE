@@ -29,4 +29,8 @@ public interface AmLoginFacadeLocal {
 
     int count();
     
+    public String authenticate(String username, String password);
+
+    public String testEJB();
+    
 }

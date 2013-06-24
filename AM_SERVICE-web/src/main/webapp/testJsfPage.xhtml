@@ -11,11 +11,31 @@
     </h:head>  
       
     <h:body>  
+       <p:panel id="panel" header="Login Form" style="margin-bottom:10px;">  
+        <p:messages id="messages" />  
+        <h:panelGrid columns="3">  
+            <h:outputLabel for="username" value="Username *" />  
+            <p:inputText id="username"   
+                value="#{amLoginMB.username}" required="true" label="Username">  
+                <f:validateLength minimum="2" />  
+            </p:inputText>  
+            <p:message for="username" />  
+  
+            <h:outputLabel for="password" value="Password *" />  
+            <p:inputText id="password"   
+                value="#{amLoginMB.password}" required="true" label="Password"/>  
+            <p:message for="password" />  
        
-        <p:outputLabel value=" prime"></p:outputLabel>
-        <h:outputText value="#{amLoginMB.value}" ></h:outputText>>
-        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
-          
+            <h:outputLabel  value= "#{amLoginMB.testEJB}"/>  
+            
+            <p:commandButton   action="#{amLoginMB.loginAction}" value ="LogIn"/>
+        
+        </h:panelGrid>
+        
+        
+    </p:panel>  
+        
     </h:body>  
+        
         </f:view>
 </html>  
